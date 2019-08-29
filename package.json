@@ -1,5 +1,5 @@
 {
-  "name": "confidence",
+  "name": "@makeomatic/confidence",
   "description": "Configuration API",
   "version": "4.0.2",
   "repository": "git://github.com/hapipal/confidence",
