@@ -11,14 +11,14 @@
     "api"
   ],
   "dependencies": {
-    "alce": "1.x.x",
-    "@hapi/hoek": "6.x.x",
+    "@hapi/hoek": "8.2.1",
     "@hapi/joi": "15.x.x",
-    "yargs": "13.x.x"
+    "alce": "1.x.x",
+    "yargs": "14.0.0"
   },
   "devDependencies": {
-    "@hapi/code": "5.x.x",
-    "@hapi/lab": "19.x.x"
+    "@hapi/code": "6.0.0",
+    "@hapi/lab": "20.2.1"
   },
   "bin": {
     "confidence": "bin/confidence"
@@ -27,5 +27,9 @@
     "test": "lab -t 100 -a @hapi/code -L",
     "test-cov-html": "lab -r html -o coverage.html -a @hapi/code -L"
   },
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "files": [
+    "bin/",
+    "lib/"
+  ]
 }
