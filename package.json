@@ -1,7 +1,7 @@
 {
   "name": "@makeomatic/confidence",
   "description": "Configuration API",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "repository": "git://github.com/hapipal/confidence",
   "main": "lib/index.js",
   "keywords": [
@@ -11,14 +11,14 @@
     "api"
   ],
   "dependencies": {
-    "@hapi/hoek": "8.2.1",
-    "@hapi/joi": "15.x.x",
+    "@hapi/hoek": "9.0.2",
+    "@hapi/joi": "17.1.0",
     "alce": "1.x.x",
-    "yargs": "14.0.0"
+    "yargs": "15.1.0"
   },
   "devDependencies": {
-    "@hapi/code": "6.0.0",
-    "@hapi/lab": "20.2.1"
+    "@hapi/code": "8.0.1",
+    "@hapi/lab": "22.0.3"
   },
   "bin": {
     "confidence": "bin/confidence"

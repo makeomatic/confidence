@@ -270,7 +270,7 @@ describe('validate()', () => {
     // object $filter with env
     validate('empty object filter', { key: { $filter: {} } });
     validate('object filter without env', { key: { $filter: { a: 'b' } } });
-    validate('object filter without additionl key', { key: { $filter: { $env: 'NODE_ENV', a: 'b' } } },);
+    validate('object filter without additionl key', { key: { $filter: { $env: 'NODE_ENV', a: 'b' } } });
 
     // unknown $ directives
     validate('invalid default', { key: { $default: { $b: 5 } } });
@@ -285,12 +285,12 @@ describe('validate()', () => {
     validate('value with param', { key: { $value: 1, $param: 'a.b' } });
     validate('value with env', { key: { $value: 1, $env: 'NODE_ENV' } });
     validate('value with non-directive keys', { key: { $value: 1, a: 1 } });
-    validate('param with filter', { key: { $param : 'a.b', $filter: 'a' } });
-    validate('param with range', { key: { $param : 'a.b', $range: [{ limit: 10, value: 4 }] } });
-    validate('param with env', { key: { $param : 'a.b', $env: 'NODE_ENV' } });
+    validate('param with filter', { key: { $param: 'a.b', $filter: 'a' } });
+    validate('param with range', { key: { $param: 'a.b', $range: [{ limit: 10, value: 4 }] } });
+    validate('param with env', { key: { $param: 'a.b', $env: 'NODE_ENV' } });
     validate('param with non-directive keys', { key: { $param: 'a.b', a: 1 } });
-    validate('env with filter', { key: { $env : 'NODE_ENV', $filter: 'a' } });
-    validate('env with $range', { key: { $env : 'NODE_ENV', $range: [{ limit: 10, value: 4 }] } });
+    validate('env with filter', { key: { $env: 'NODE_ENV', $filter: 'a' } });
+    validate('env with $range', { key: { $env: 'NODE_ENV', $range: [{ limit: 10, value: 4 }] } });
     validate('env with non-directive keys', { key: { $env: 'NODE_ENV', a: 1 } });
     validate('filter without any value', { key: { $filter: '1' } });
     validate('filter with only default', { key: { $filter: 'a', $default: 1 } });
