@@ -1,7 +1,7 @@
 {
   "name": "@makeomatic/confidence",
   "description": "Configuration API",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "repository": "git://github.com/hapipal/confidence",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
     "@hapi/code": "8.0.1",
     "@hapi/lab": "22.0.4",
     "@types/confidence": "^1.4.30",
-    "@types/hapi__joi": "^16.0.12", 
+    "@types/hapi__joi": "^16.0.12",
     "eslint-config-makeomatic": "^5.0.0",
     "typescript": "^3.8.3"
   },
