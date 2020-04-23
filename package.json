@@ -4,6 +4,7 @@
   "version": "5.0.0",
   "repository": "git://github.com/hapipal/confidence",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "hapi",
     "plugin",
@@ -11,19 +12,23 @@
     "api"
   ],
   "dependencies": {
-    "@hapi/hoek": "9.0.2",
-    "@hapi/joi": "17.1.0",
+    "@hapi/hoek": "9.0.4",
+    "@hapi/joi": "17.1.1",
     "alce": "1.x.x",
-    "yargs": "15.1.0"
+    "yargs": "15.3.1"
   },
   "devDependencies": {
     "@hapi/code": "8.0.1",
-    "@hapi/lab": "22.0.3"
-  },
-  "bin": {
-    "confidence": "bin/confidence"
+    "@hapi/lab": "22.0.4",
+    "@types/confidence": "^1.4.30",
+    "@types/hapi__joi": "^16.0.12", 
+    "eslint-config-makeomatic": "^5.0.0",
+    "typescript": "^3.8.3"
   },
   "scripts": {
+    "compile": "tsc -b tsconfig.build.json",
+    "pretest": "yarn compile",
+    "prepublishOnly": "yarn compile",
     "test": "lab -t 100 -a @hapi/code -L",
     "test-cov-html": "lab -r html -o coverage.html -a @hapi/code -L"
   },
