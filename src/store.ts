@@ -143,7 +143,7 @@ function getNode<Response>(tree: Node, key: string, criteria: Criteria, applied?
 }
 
 // Applies criteria on an entire tree
-function walk<Response>(node: Node | undefined, criteria: Criteria, applied: Applied[]): Response | undefined {
+function walk<Response>(node: Node | undefined, criteria: Criteria, applied?: Applied[]): Response | undefined {
     if (isSimple<Response>(node)) {
         return node
     }
@@ -221,7 +221,7 @@ export class Store {
         this._tree = Hoek.clone(document as Node)
     }
 
-    get<Response>(key: string, criteria: Criteria, applied: Applied[]): Response | undefined {
+    get<Response>(key: string, criteria: Criteria, applied?: Applied[]): Response | undefined {
         const node = getNode<Node>(this._tree, key, criteria, applied)
         return walk(node, criteria, applied)
     }
