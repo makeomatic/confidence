@@ -12,7 +12,7 @@ const buildCache = function () {
 buildCache()
 
 
-export function generate() {
+export function generate(): string {
 
     let rand = Crypto.randomBytes(10)
 

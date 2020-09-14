@@ -181,6 +181,7 @@ export const store = internals.store = internals.Joi.object({
 
 declare module '@hapi/joi' {
     interface ObjectSchema<TSchema = any> {
+        // eslint-disable-next-line @typescript-eslint/ban-types
         notInstanceOf(constructor: Function, name?: string): this;
         withPattern(key: string, pattern: RegExp, options: { name?: string; inverse?: boolean }): this;
     }

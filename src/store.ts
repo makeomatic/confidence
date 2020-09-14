@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Hoek = require('@hapi/hoek');
 import * as Schema from './schema'
 
@@ -214,7 +215,7 @@ export class Store {
         this.load(document || {})
     }
 
-    load(document: unknown) {
+    load(document: unknown): void {
         const err = Store.validate(document)
         Hoek.assert(!err, err)
 
