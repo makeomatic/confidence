@@ -1,8 +1,6 @@
-'use strict'
-
 // Load modules
 
-import Joi = require('@hapi/joi');
+import Joi = require('joi')
 
 // Declare internals
 type Internals = {
@@ -179,7 +177,7 @@ export const store = internals.store = internals.Joi.object({
     .allow(null)
     .id('confidence-store')
 
-declare module '@hapi/joi' {
+declare module 'joi' {
     interface ObjectSchema<TSchema = any> {
         // eslint-disable-next-line @typescript-eslint/ban-types
         notInstanceOf(constructor: Function, name?: string): this;
